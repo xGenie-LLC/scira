@@ -5,6 +5,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    env_file:
+      - .env
     ports:
       - "3000"          # 只声明容器端口，Dokploy 会自动映射到 80/443
     environment:
