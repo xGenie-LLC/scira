@@ -1,12 +1,12 @@
 version: '3.8'
 
 services:
-  scira.app:
+  scira:                # ← 不要用 scira.app
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - '3000:3000'
+      - "3000"          # 只声明容器端口，Dokploy 会自动映射到 80/443
     environment:
       - NODE_ENV=production
       - PORT=3000
