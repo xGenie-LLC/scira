@@ -25,7 +25,6 @@ const nextConfig: NextConfig = {
     },
   },
   transpilePackages: ['geist', '@daytonaio/sdk'],
-  output: 'standalone',
   async headers() {
     return [
       {
